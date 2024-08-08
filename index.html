@@ -33,9 +33,40 @@
         </p>
         <p>El juego termina cuando adivinas el número.</p>
       </section>
-<article class="text-center mt-4">
-      <button class="btn btn-info btn-lg">Comenzar <i class="bi bi-arrow-up-circle-fill"></i></button>
-    </article>
+      <article class="text-center mt-4">
+        <button
+          type="button"
+          class="btn btn-info btn-lg"
+          id="btnComenzar"
+          onclick="comenzarPartida()"
+        >
+          Comenzar <i class="bi bi-arrow-up-circle-fill"></i>
+        </button>
+        <form
+        class="container my-5 bg-primary-subtle p-4 rounded"
+        id="formJuego"
+        onsubmit="consultarNumero(event)"
+      >
+        <div class="d-flex">
+          <input
+            type="number"
+            placeholder="Ingresá un número"
+            class="form-control bg-info-subtle"
+            id="numeroIngresado"
+          />
+          <button
+            class="btn btn-outline-success ms-2"
+            type="submit"
+            id="btnAdivinar"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+      </article>
+      <div class="alert-primary d-none " role="alert" id="msj">
+        Acertaste!!!
+      </div>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
